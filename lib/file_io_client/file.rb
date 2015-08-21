@@ -1,5 +1,5 @@
 module FileIoClient
-  class Response
+  class File
     def initialize(json)
       @parsed = JSON.parse(json)
     end
@@ -17,8 +17,8 @@ module FileIoClient
       @parsed['expiry']
     end
 
-    def url
-      "https://file.io/#{key}"
+    def download_link
+      @parsed['link']
     end
   end
 end

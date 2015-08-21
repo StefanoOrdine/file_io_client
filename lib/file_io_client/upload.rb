@@ -6,7 +6,7 @@ module FileIoClient
 
         raise CurlError unless result_status == 0
 
-        Response.new(json_response)
+        File.new(json_response)
       end
     end
   end
