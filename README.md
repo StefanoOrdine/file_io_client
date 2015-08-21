@@ -18,6 +18,8 @@ Or install it yourself as:
 
     $ gem install file_io_client
 
+Under the hood `file_io_client` uses `curl` and `libcurl` so be sure to satisfy these dependencies on your system (refer to http://curl.haxx.se/ for this).
+
 ## Usage
 
 ```ruby
