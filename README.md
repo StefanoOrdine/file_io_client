@@ -1,8 +1,6 @@
 # FileIoClient
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/file_io_client`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Provides a client to interact with http://file.io ephimeral upload service.
 
 ## Installation
 
@@ -22,7 +20,18 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+file = FileIoClient::Upload.file('path/to/your/file.any')
+
+file.success?
+# => true
+file.download_link
+# => "https://file.io/I7egcH"
+file.key
+# => "I7egcH"
+file.expiry
+# => "14 days"
+```
 
 ## Development
 
